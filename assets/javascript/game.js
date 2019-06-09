@@ -6,8 +6,8 @@ var punkBands = ["BLINK-182", "GREEN DAY", "MY CHEMICAL ROMANCE", "FALL OUT BOY"
 var numGuesses = 10;
 var guessesLeft = 0;
 var guessedLetters = [];
-var answerArray = [];
-var answer = [];
+var answerArray;
+var answer;
 var wins = 0;
 var losses = 0;
 var isFinished = false;
@@ -29,8 +29,9 @@ function setUp() {
   answer = [];
   answerArray = [];
   answer = punkBands[Math.floor(Math.random() * punkBands.length) + 1];
-  //A == 65, Z == 90, " " == 32,
-  for (var x = 0; x < answer.length; x++) {
+  var answerLength = answer.length;
+
+  for (var x = 0; x < answerLength; x++) {
     if(answer.charCodeAt(x) >= 65 && answer.charCodeAt(x) <= 90) {
       answerArray[x] = "_";
     }
@@ -42,7 +43,9 @@ function setUp() {
   guessesLeft = numGuesses;
   guessedLetters =[];
 
+  $("#loser").text("");
   $("#bandName").text("");
+  BandPicture.src = 'assets/images/punkrockband.jpg';
 
   console.log(answer);
   console.log(answerArray);
@@ -50,7 +53,6 @@ function setUp() {
 }
 
 function updates() {
-  //BandPicture.src = 'assets/images/gorillaz.jpg';
   document.getElementById("wins").textContent = wins;
   document.getElementById("losses").textContent = losses;
   document.getElementById("numGuesses").textContent = guessesLeft;
@@ -63,6 +65,10 @@ function check(letter) {
       guessedLetters.push(letter);
       if (answer.indexOf(letter) === -1) {
           guessesLeft--;
+          //if (guessesLeft <=3) {
+           // document.getElementById("numGuesses").style.color = "#be0000";
+
+          //}
       } else { 
           for (var x = 0; x < answer.length; x++) {
               if (letter === answer[x]) {
@@ -81,7 +87,7 @@ function isLoser() {
     isFinished = true;
     //playpiano cat
     var loserPrompt = "Please press ANY key to try again!";
-    $("#bandName").text(loserPrompt);
+    $("#loser").text(loserPrompt);
     document.getElementById("bandPic").src = "https://media.giphy.com/media/SEO7ub2q1fORa/giphy.gif";
     playAudio("keyboardcat");
   }
@@ -155,7 +161,6 @@ function isWinner(x) {
         BandPicture.src = 'assets/images/newfoundglory.jpg';
         playAudio("newfoundglory");
       }
-    //document.getElementById("bandPic").src = "https://images2.minutemediacdn.com/image/upload/c_crop,h_1193,w_2121,x_0,y_175/f_auto,q_auto,w_1100/v1554921998/shape/mentalfloss/549585-istock-909106260.jpg";
     }
 }
 

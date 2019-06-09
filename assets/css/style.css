@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'AllAgesDEMO';
+    src: url("kc-fonts_all-ages/AllAgesDEMO.ttf");
+}
+
+@font-face {
+    font-family: "CF PunkRockShow";
+    src: url("cloutierfontes_punkrockshow/CF PunkRockShow.ttf")
+}
+
+@font-face {
+    font-family: "CFPunkForever";
+    src: url("cloutierfontes_cf-punk-forever/CFPunkForever.ttf")
+}
+
+@font-face {
+    font-family: "CFPunkisnotDead-Regular";
+    src: url("cloutierfontes_cf-punk-is-not-dead/CFPunkisnotDead-Regular.ttf")
+}
+
 body {
     background-color:black;
     color:white;
@@ -11,6 +31,7 @@ body {
 
 h1 {
     margin:auto;
+    font-size: 30px;
 }
 
 #bandPic {
@@ -19,12 +40,13 @@ h1 {
 }
 
 #bandName {
-    width: 300px;
+    font-family: "CFPunkisnotDead-Regular";
+    font-size: 40px;
 }
 
 .col-sm {
     border-style:dotted;
-    border-color:color;
+    border-color:white;
     border-width:5px;
     padding: 20px 0;
     margin-bottom: 20px;
