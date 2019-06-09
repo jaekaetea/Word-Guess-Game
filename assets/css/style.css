@@ -30,6 +30,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-#answerArray {
+#answerArray, #guessedLetters {
     letter-spacing: .25em;
 }
