@@ -1,8 +1,7 @@
 var punkBands = ["BLINK-182", "GREEN DAY", "MY CHEMICAL ROMANCE", "FALL OUT BOY", "SUM 41",
-"JIMMY EAT WORLD", "SIMPLE PLAN", "THE ALL AMERICAN REJECTS", "THE OFFSPRING",
-"BOWLING FOR SOUP", "THE STARTING LINE", "THE STROKES", "ARCADE FIRE", 
-"ARCTIC MONKEYS", "RADIOHEAD", "THE KILLERS", "INTERPOL", "GORILLAZ", "DEATH CAB FOR CUTIE",
-"EVANESCENCE"];
+"JIMMY EAT WORLD", "SIMPLE PLAN", "THE ALL-AMERICAN REJECTS", "THE OFFSPRING", "RADIOHEAD", 
+"THE STROKES", "ARCADE FIRE", "ARCTIC MONKEYS", "THE KILLERS", "INTERPOL", 
+"GORILLAZ", "DEATH CAB FOR CUTIE", "EVANESCENCE", "BOWLING FOR SOUP"];
 
 var numGuesses = 10;
 var guessesLeft = 0;
@@ -13,7 +12,9 @@ var wins = 0;
 var losses = 0;
 var isFinished = false;
 
-var mySound = document.getElementById("keyboardCat");
+confirm("Press OK if you are 18 years or older.  If not, please get parental approval.");
+
+var mySound = document.getElementById("keyboardcat");
 
 function playAudio(x) {
   mySound = document.getElementById(x); 
@@ -35,10 +36,12 @@ function setUp() {
       answerArray[x] = answer[x];
     }
   }
+  
   guessesLeft = numGuesses;
   guessedLetters =[];
 
   //document.getElementById("bandPic").src = "";
+  $("#bandName").text("");
 
   console.log(answer);
   console.log(answerArray);
@@ -46,6 +49,7 @@ function setUp() {
 }
 
 function updates() {
+  //$('#bandPic').html("<img src='../assets/images/blink182.jpg'>");
   document.getElementById("wins").textContent = wins;
   document.getElementById("losses").textContent = losses;
   document.getElementById("numGuesses").textContent = guessesLeft;
@@ -75,17 +79,64 @@ function isLoser() {
     updates();
     isFinished = true;
     //playpiano cat
+    var loserPrompt = "Please press ANY key to try again!";
+    $("#bandName").text(loserPrompt);
     document.getElementById("bandPic").src = "https://media.giphy.com/media/SEO7ub2q1fORa/giphy.gif";
     //playAudio("sounds");
-    playAudio("keyboardCat");
+    playAudio("keyboardcat");
   }
 }
 
-function isWinner() {
+function isWinner(x) {
   if (answerArray.indexOf("_") === -1) {
     wins++;
     updates();
     isFinished = true;
+    //add pictures and music here
+    //$('#bandPic').html("<img src='../assets/images/blink182'>");
+    document.getElementById("bandName").textContent = answer;
+    if(answer === "BLINK-182") {
+        playAudio("blink182");
+      } else if (answer === "GREEN DAY") {
+        playAudio("greenday");
+        document.getElementById("bandName").textContent = answer;
+      } else if (answer === "GREEN DAY") {
+        playAudio("greenday");
+      } else if (answer === "MY CHEMICAL ROMANCE") {
+        playAudio("mychemicalromance");
+      } else if (answer === "FALL OUT BOY") {
+        playAudio("falloutboy");
+      } else if (answer === "SUM 41") {
+        playAudio("sum41");
+      } else if (answer === "JIMMY EAT WORLD") {
+        playAudio("jimmyeatworld");
+      } else if (answer === "SIMPLE PLAN") {
+        playAudio("simpleplan");
+      } else if (answer === "THE ALL-AMERICAN REJECTS") {
+        playAudio("theallamericanrejects");
+      } else if (answer === "THE OFFSPRING") {
+        playAudio("theoffspring");
+      } else if (answer === "RADIOHEAD") {
+        playAudio("radiohead");
+      } else if (answer === "THE STROKES") {
+        playAudio("thestrokes");
+      } else if (answer === "ARCADE FIRE") {
+        playAudio("arcadefire");
+      } else if (answer === "ARCTIC MONKEYS") {
+        playAudio("arcticmonkeys");
+      } else if (answer === "THE KILLERS") {
+        playAudio("thekillers");
+      } else if (answer === "INTERPOL") {
+        playAudio("interpol");
+      } else if (answer === "GORILLAZ") {
+        playAudio("gorillaz");
+      } else if (answer === "DEATH CAB FOR CUTIE") {
+        playAudio("deathcabforcutie");
+      } else if (answer === "EVANESCENCE") {
+        playAudio("evanescence");
+      } else if (answer === "BOWLING FOR SOUP") {
+        playAudio("bowlingforsoup");
+      }
     document.getElementById("bandPic").src = "https://images2.minutemediacdn.com/image/upload/c_crop,h_1193,w_2121,x_0,y_175/f_auto,q_auto,w_1100/v1554921998/shape/mentalfloss/549585-istock-909106260.jpg";
     }
 }
@@ -99,7 +150,7 @@ document.onkeyup = function(event) {
     if(event.keyCode >= 65 && event.keyCode <= 90) {
       check(event.key.toUpperCase()); 
       updates();
-      isWinner();
+      isWinner(answer);
       isLoser();
     }
   }

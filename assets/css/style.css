@@ -1,6 +1,7 @@
 body {
     background-color:black;
     color:white;
+    text-align:center;
 }
 
 .imgPort {
@@ -8,8 +9,8 @@ body {
     height:300px;
 }
 
-div {
-    text-align:center;
+h1 {
+    margin:auto;
 }
 
 #bandPic {
@@ -29,3 +30,6 @@ div {
     margin-bottom: 20px;
 }
 
+#answerArray {
+    letter-spacing: .25em;
+}
