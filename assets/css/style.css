@@ -2,7 +2,7 @@
     font-family: 'AllAgesDEMO';
     src: url("kc-fonts_all-ages/AllAgesDEMO.ttf");
 }
-
+/*keeping this font*/
 @font-face {
     font-family: "CF PunkRockShow";
     src: url("cloutierfontes_punkrockshow/CF PunkRockShow.ttf")
@@ -12,7 +12,7 @@
     font-family: "CFPunkForever";
     src: url("cloutierfontes_cf-punk-forever/CFPunkForever.ttf")
 }
-
+/*DO NOT LIKE*/
 @font-face {
     font-family: "CFPunkisnotDead-Regular";
     src: url("cloutierfontes_cf-punk-is-not-dead/CFPunkisnotDead-Regular.ttf")
@@ -22,11 +22,12 @@ body {
     background-color:black;
     color:white;
     text-align:center;
+    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 .imgPort {
     top:0;
-    height:300px;
+    height:175px;
 }
 
 h1 {
@@ -35,12 +36,16 @@ h1 {
 }
 
 #bandPic {
-    width: 350px;
-    height: 300px;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    margin:auto;
+    margin-bottom:10px;
+    margin-top: 0;
 }
 
 #bandName {
-    font-family: "CFPunkisnotDead-Regular";
+    font-family: "AllAgesDEMO";
     font-size: 40px;
 }
 
@@ -52,6 +57,20 @@ h1 {
     margin-bottom: 20px;
 }
 
+p{
+    padding:5px;
+
+}
+
 #answerArray, #guessedLetters {
     letter-spacing: .25em;
+}
+
+#guessedLetters {
+    margin: 20px;
+    word-break: break-all;
+}
+
+#wins, #losses, #answerArray, #guessedLetters {
+    font-family:"Gaegu", cursive;
 }
