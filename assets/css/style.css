@@ -74,3 +74,7 @@ p{
 #wins, #losses, #answerArray, #guessedLetters {
     font-family:"Gaegu", cursive;
 }
+
+#numGuesses {
+    font-weight: bold;
+}

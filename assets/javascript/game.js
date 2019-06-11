@@ -28,7 +28,7 @@ function setUp() {
   mySound.pause(); 
   answer = [];
   answerArray = [];
-  answer = punkBands[Math.floor(Math.random() * punkBands.length) + 1];
+  answer = punkBands[Math.floor(Math.random() * punkBands.length)];
   var answerLength = answer.length;
 
   for (var x = 0; x < answerLength; x++) {
