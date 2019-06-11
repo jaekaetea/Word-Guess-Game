@@ -1,8 +1,11 @@
 # Psychic-Game
 Homework 3 
 
+Play the game here: https://jaekaetea.github.io/Psychic-Game/
+
 Option Two: Word Guess Game (Challenge - Recommended)
-1.	Watch the demo.
+1.	Watch the demo: 
+https://www.youtube.com/watch?v=W-IJcC4tYFI&feature=youtu.be
 2.	Choose a theme for your game! In the demo, we picked an 80s theme: 80s questions, 80s sound and an 80s aesthetic. You can choose any subject for your theme, though, so be creative!
 3.	Use key events to listen for the letters that your players will type.
 4.	Display the following on the page:
