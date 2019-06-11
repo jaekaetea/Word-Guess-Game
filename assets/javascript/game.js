@@ -14,7 +14,7 @@ var losses = 0;
 var isFinished = false;
 
 BandPicture = document.getElementById("bandPic");
-var mySound = document.getElementById("keyboardcat");
+var mySound = new Audio();
 
 confirm("Press OK if you are 18 years or older.  If not, please get parental approval.");
 
@@ -89,11 +89,6 @@ function check(letter) {
   }
 }
 
-function getAudio(x) {
-  mySound = document.getElementById(x); 
-  mySound.currentTime = 0;  
-}
-
 function isLoser() {
   if (guessesLeft <= 0) {
     losses++;
@@ -102,7 +97,9 @@ function isLoser() {
     //playpiano cat
     $("#loser").text(loserPrompt);
     document.getElementById("bandPic").src = "https://media.giphy.com/media/SEO7ub2q1fORa/giphy.gif";
-    getAudio("keyboardcat");
+
+    mySound.src = "assets/music/keyboardCat.mp3";
+    mySound.currentTime = 0;  
     mySound.play();
   }
 }
@@ -117,6 +114,8 @@ function isWinner(x) {
     document.getElementById("loser").style.color = "#be0000";
     $("#loser").text(againPrompt);
     document.getElementById("bandName").textContent = answer;
+
+    mySound.currentTime = 0;  
     mySound.play()
     }
 }
@@ -137,89 +136,89 @@ document.onkeyup = function(event) {
     }
   }
 }
-
+//mySound.src = "assets/music/keyboardCat.mp3";
 function setUp2() {
   if(answer === "BLINK-182") {
     BandPicture.src = 'assets/images/blink182.jpg';
-    getAudio("blink182");
+    mySound.src = "assets/music/blink182.mp3.aac";  
   } else if (answer === "GREEN DAY") {
     BandPicture.src = 'assets/images/greenday.jpg';
-    getAudio("greenday");
+    mySound.src = "assets/music/greenday.mp3.aac"; 
   } else if (answer === "MY CHEMICAL ROMANCE") {
     BandPicture.src = 'assets/images/mychemicalromance.jpg';
-    getAudio("mychemicalromance");
+    mySound.src = "assets/music/mychemicalromance.mp3.aac"; 
   } else if (answer === "FALL OUT BOY") {
     BandPicture.src = 'assets/images/falloutboy.jpg';
-    getAudio("falloutboy");
+    mySound.src = "assets/music/falloutboy.mp3.aac";  
   } else if (answer === "SUM 41") {
     BandPicture.src = 'assets/images/sum41.jpg';
-    getAudio("sum41");
+    mySound.src = "assets/music/sum41.mp3.aac";
   } else if (answer === "JIMMY EAT WORLD") {
     BandPicture.src = 'assets/images/jimmyeatworld.jpg';
-    getAudio("jimmyeatworld");
+    mySound.src = "assets/music/jimmyeatworld.mp3.aac";
   } else if (answer === "SIMPLE PLAN") {
     BandPicture.src = 'assets/images/simpleplan.jpg';
-    getAudio("simpleplan");
+    mySound.src = "assets/music/simpleplan.mp3.aac";  
   } else if (answer === "THE ALL-AMERICAN REJECTS") {
     BandPicture.src = 'assets/images/theallamericanrejects.jpg';
-    getAudio("theallamericanrejects");
+    mySound.src = "assets/music/theallamericanrejects.mp3.aac"; 
   } else if (answer === "THE OFFSPRING") {
     BandPicture.src = 'assets/images/theoffspring.jpg';
-    getAudio("theoffspring");
+    mySound.src = "assets/music/theoffspring.mp3.aac"; 
   } else if (answer === "RADIOHEAD") {
     BandPicture.src = 'assets/images/radiohead.jpg';
-    getAudio("radiohead");
+    mySound.src = "assets/music/radiohead.mp3.aac";  
   } else if (answer === "THE STROKES") {
     BandPicture.src = 'assets/images/thestrokes.jpg';
-    getAudio("thestrokes");
+    mySound.src = "assets/music/thestrokes.mp3.aac";  
   } else if (answer === "ARCADE FIRE") {
     BandPicture.src = 'assets/images/arcadefire.jpg';
-    getAudio("arcadefire");
+    mySound.src = "assets/music/arcadefire.mp3.aac"; 
   } else if (answer === "ARCTIC MONKEYS") {
     BandPicture.src = 'assets/images/arcticmonkeys.jpg';
-    getAudio("arcticmonkeys");
+    mySound.src = "assets/music/arcticmonkeys.mp3.aac";
   } else if (answer === "THE KILLERS") {
     BandPicture.src = 'assets/images/thekillers.jpg';
-    getAudio("thekillers");
+    mySound.src = "assets/music/thekillers.mp3.aac";
   } else if (answer === "INTERPOL") {
     BandPicture.src = 'assets/images/interpol.jpg';
-    getAudio("interpol");
+    mySound.src = "assets/music/interpol.mp3.aac";   
   } else if (answer === "GORILLAZ") {
     BandPicture.src = 'assets/images/gorillaz.jpg';
-    getAudio("gorillaz");
+    mySound.src = "assets/music/gorillaz.mp3.aac"; 
   } else if (answer === "EVANESCENCE") {
     BandPicture.src = 'assets/images/evanescence.jpg';
-    getAudio("evanescence");
+    mySound.src = "assets/music/evanescence.mp3.aac"; 
   } else if (answer === "BOWLING FOR SOUP") {
     BandPicture.src = 'assets/images/bowlingforsoup.jpg';
-    getAudio("bowlingforsoup");
+    mySound.src = "assets/music/bowlingforsoup.mp3.aac";  
   } else if (answer === "NEW FOUND GLORY") {
     BandPicture.src = 'assets/images/newfoundglory.jpg';
-    getAudio("newfoundglory");
+    mySound.src = "assets/music/newfoundglory.mp3.aac";  
   } else if (answer === "NO DOUBT") {
     BandPicture.src = 'assets/images/nodoubt.jpg';
-    getAudio("nodoubt");
+    mySound.src = "assets/music/nodoubt.mp3.aac";
   } else if (answer === "THE RED JUMPSUIT APPARATUS") {
     BandPicture.src = 'assets/images/theredjumpsuitapparatus.jpg';
-    getAudio("theredjumpsuitapparatus");
+    mySound.src = "assets/music/theredjumpsuitapparatus.mp3.aac";
   } else if (answer === "ALKALINE TRIO") {
     BandPicture.src = 'assets/images/alkalinetrio.jpg';
-    getAudio("alkalinetrio");
+    mySound.src = "assets/music/alkalinetrio.mp3.aac"; 
   } else if (answer === "SUGARCULT") {
     BandPicture.src = 'assets/images/sugarcult.jpg';
-    getAudio("sugarcult");
+    mySound.src = "assets/music/sugarcult.mp3.aac";
   } else if (answer === "BRAND NEW") {
     BandPicture.src = 'assets/images/brandnew.jpg';
-    getAudio("brandnew");
+    mySound.src = "assets/music/brandnew.mp3.aac";  
   } else if (answer === "RELIENT K") {
     BandPicture.src = 'assets/images/relientk.jpg';
-    getAudio("relientk");
+    mySound.src = "assets/music/relientk.mp3.aac"; 
   } else if (answer === "AGAINST ME!") {
     BandPicture.src = 'assets/images/againstme.jpg';
-    getAudio("againstme");
+    mySound.src = "assets/music/againstme.mp3.aac"; 
   } else if (answer === "WEEZER") {
     BandPicture.src = 'assets/images/weezer.jpg';
-    getAudio("weezer");
+    mySound.src = "assets/music/weezer.mp3.aac";
   }
 }
 
