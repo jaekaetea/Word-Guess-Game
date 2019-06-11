@@ -36,8 +36,8 @@ h1 {
 }
 
 #bandPic {
-    width: 300px;
-    height: 250px;
+    width: 400px;
+    height: 300px;
     display: flex;
     margin:auto;
     margin-bottom:10px;
@@ -46,7 +46,8 @@ h1 {
 
 #bandName {
     font-family: "AllAgesDEMO";
-    font-size: 40px;
+    font-size: 48px;
+    margin: 0 0 10px 0;
 }
 
 .col-sm {
@@ -59,7 +60,6 @@ h1 {
 
 p{
     padding:5px;
-
 }
 
 #answerArray, #guessedLetters {
@@ -71,8 +71,12 @@ p{
     word-break: break-all;
 }
 
-#wins, #losses, #answerArray, #guessedLetters {
+#wins, #losses, #answerArray, #guessedLetters, #loser {
     font-family:"Gaegu", cursive;
+}
+
+#loser {
+    font-size: 24px;
 }
 
 #numGuesses {

@@ -18,7 +18,9 @@ var mySound = document.getElementById("keyboardcat");
 
 confirm("Press OK if you are 18 years or older.  If not, please get parental approval.");
 
-$("#loser").text("PRESS ANY KEY TO GET STARTED!");
+var startPrompt = "PRESS ANY KEY TO GET STARTED!";
+var loserPrompt = "Press the SPACE key to try again!";
+var againPrompt = "Press the SPACE key to play again!";
 
 function setUp() {
   mySound.pause(); 
@@ -41,12 +43,13 @@ function setUp() {
   document.getElementById("numGuesses").style.fontSize = "initial";
   guessedLetters =[];
 
-  $("#loser").text("");
+  document.getElementById("loser").style.color = "#ffffff";
+  $("#loser").text(startPrompt);
   $("#bandName").text("");
   BandPicture.src = 'assets/images/punkrockband.jpg';
 
+  console.log("CHEATERS DON'T WIN! :(")
   console.log(answer);
-  console.log(answerArray);
 
   updates();
 }
@@ -97,7 +100,6 @@ function isLoser() {
     updates();
     isFinished = true;
     //playpiano cat
-    var loserPrompt = "Please press ANY key to try again!";
     $("#loser").text(loserPrompt);
     document.getElementById("bandPic").src = "https://media.giphy.com/media/SEO7ub2q1fORa/giphy.gif";
     getAudio("keyboardcat");
@@ -112,7 +114,8 @@ function isWinner(x) {
     isFinished = true;
     //add pictures and music here
     setUp2();
-    $("#loser").text("");
+    document.getElementById("loser").style.color = "#be0000";
+    $("#loser").text(againPrompt);
     document.getElementById("bandName").textContent = answer;
     mySound.play()
     }
@@ -120,8 +123,10 @@ function isWinner(x) {
 
 document.onkeyup = function(event) {
   if (isFinished) {
-    setUp();
-    isFinished = false;  
+    if (event.keyCode === 32) {
+      setUp();
+      isFinished = false; 
+    }
   } 
   else {
     if(event.keyCode >= 65 && event.keyCode <= 90) {
