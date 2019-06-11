@@ -1,12 +1,8 @@
 var punkBands = ["BLINK-182", "GREEN DAY", "MY CHEMICAL ROMANCE", "FALL OUT BOY", "SUM 41",
 "JIMMY EAT WORLD", "SIMPLE PLAN", "THE ALL-AMERICAN REJECTS", "THE OFFSPRING", "RADIOHEAD", 
 "THE STROKES", "ARCADE FIRE", "ARCTIC MONKEYS", "THE KILLERS", "INTERPOL", "GORILLAZ", 
-"EVANESCENCE", "BOWLING FOR SOUP", "NEW FOUND GLORY"];
-
-//no doubt - running, the redjump suit - push you down
-//alkaline trio mercy me, sugarcult memory
-//brand new -sic , relient k be escape
-//against me trash unreal, weezer hash pipe
+"EVANESCENCE", "BOWLING FOR SOUP", "NEW FOUND GLORY", "NO DOUBT", "THE RED JUMPSUIT APPARATUS", 
+"ALKALINE TRIO", "SUGARCULT", "BRAND NEW", "RELIENT K", "AGAINST ME!", "WEEZER"];
 
 var numGuesses = 10;
 var guessesLeft = 0;
@@ -195,6 +191,30 @@ function setUp2() {
   } else if (answer === "NEW FOUND GLORY") {
     BandPicture.src = 'assets/images/newfoundglory.jpg';
     getAudio("newfoundglory");
+  } else if (answer === "NO DOUBT") {
+    BandPicture.src = 'assets/images/nodoubt.jpg';
+    getAudio("nodoubt");
+  } else if (answer === "THE RED JUMPSUIT APPARATUS") {
+    BandPicture.src = 'assets/images/theredjumpsuitapparatus.jpg';
+    getAudio("theredjumpsuitapparatus");
+  } else if (answer === "ALKALINE TRIO") {
+    BandPicture.src = 'assets/images/alkalinetrio.jpg';
+    getAudio("alkalinetrio");
+  } else if (answer === "SUGARCULT") {
+    BandPicture.src = 'assets/images/sugarcult.jpg';
+    getAudio("sugarcult");
+  } else if (answer === "BRAND NEW") {
+    BandPicture.src = 'assets/images/brandnew.jpg';
+    getAudio("brandnew");
+  } else if (answer === "RELIENT K") {
+    BandPicture.src = 'assets/images/relientk.jpg';
+    getAudio("relientk");
+  } else if (answer === "AGAINST ME!") {
+    BandPicture.src = 'assets/images/againstme.jpg';
+    getAudio("againstme");
+  } else if (answer === "WEEZER") {
+    BandPicture.src = 'assets/images/weezer.jpg';
+    getAudio("weezer");
   }
 }
 
