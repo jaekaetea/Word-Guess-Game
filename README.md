@@ -1,7 +1,7 @@
 # Psychic-Game
 Homework 3 
 
-Play the game here: https://jaekaetea.github.io/Psychic-Game/
+Play the game here: https://jaekaetea.github.io/Word-Guess-Game/
 
 Option Two: Word Guess Game (Challenge - Recommended)
 1.	Watch the demo:
