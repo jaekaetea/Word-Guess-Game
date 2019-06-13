@@ -1,8 +1,13 @@
-var punkBands = ["AGAINST ME!","ALKALINE TRIO","ARCADE FIRE","ARCTIC MONKEYS","BLINK-182",
-"BOWLING FOR SOUP","BRAND NEW","EVANESCENCE","FALL OUT BOY","GORILLAZ","GREEN DAY","INTERPOL",
-"JIMMY EAT WORLD","MY CHEMICAL ROMANCE","NEW FOUND GLORY","NO DOUBT","RADIOHEAD","RELIENT K",
-"SIMPLE PLAN","SUGARCULT","SUM 41","THE ALL-AMERICAN REJECTS","THE KILLERS","THE OFFSPRING",
-"THE RED JUMPSUIT APPARATUS","THE STROKES","WEEZER"];
+var punkBands = ["AGAINST ME!","ALKALINE TRIO","ALL TIME LOW","BLINK-182",
+"BOWLING FOR SOUP","BOYS LIKE GIRLS","BRAND NEW","CUTE IS WHAT WE AIM FOR",
+"EVANESCENCE","FALL OUT BOY","GOOD CHARLOTTE","GORILLAZ","GREEN DAY",
+"HEAD AUTOMATICA","HELLOGOODBYE","INTERPOL","JIMMY EAT WORLD",
+"LESS THAN JAKE","MAYDAY PARADE","MOTION CITY SOUNDTRACK","MUSE",
+"MY CHEMICAL ROMANCE","NEW FOUND GLORY","NO DOUBT","RANCID","RELIENT K",
+"SIMPLE PLAN","STORY OF THE YEAR","SUGARCULT","SUM 41","THE ALL-AMERICAN REJECTS",
+"THE ATARIS","THE KILLERS","THE OFFSPRING","THE RED JUMPSUIT APPARATUS",
+"THE STARTING LINE","THE STROKES","THE USED","THE WHITE STRIPES",
+"VAMPIRE WEEKEND","WEEZER","WHEATUS","YELLOWCARD"];
 
 
 var numGuesses = 10;
@@ -14,6 +19,7 @@ var wins = 0;
 var losses = 0;
 var isFinished = false;
 var songTitle;
+//var checkBandTest = 0;
 
 BandPicture = document.getElementById("bandPic");
 var mySound = new Audio();
@@ -28,6 +34,7 @@ function setUp() {
   mySound.pause(); 
   answer = [];
   answerArray = [];
+  //answer = punkBands[checkBandTest];
   answer = punkBands[Math.floor(Math.random() * punkBands.length)];
   var answerLength = answer.length;
 
@@ -119,6 +126,8 @@ function isWinner(x) {
 
     mySound.currentTime = 0;  
     mySound.play()
+    //test code
+    //checkBandTest++;
     }
 }
 
@@ -148,14 +157,10 @@ function setUp2() {
     songTitle = "ALKALINE TRIO - MERCY ME";
     BandPicture.src = 'assets/images/alkalinetrio.jpg';
     mySound.src = "assets/music/alkalinetrio.mp3.aac";
-} else if (answer === "ARCADE FIRE") {
-    songTitle = "ARCADE FIRE - THE SUBURBS";
-    BandPicture.src = 'assets/images/arcadefire.jpg';
-    mySound.src = "assets/music/arcadefire.mp3.aac";
-} else if (answer === "ARCTIC MONKEYS") {
-    songTitle = "ARCTIC MONKEYS - DO I WANNA KNOW/";
-    BandPicture.src = 'assets/images/arcticmonkeys.jpg';
-    mySound.src = "assets/music/arcticmonkeys.mp3.aac"; 
+} else if (answer === "ALL TIME LOW") {
+    songTitle = "ALL TIME LOW - DEAR MARIA/ COUNT ME IN";
+    BandPicture.src = 'assets/images/alltimelow.jpg';
+    mySound.src = "assets/music/alltimelow.mp3.aac";
 } else if (answer === "BLINK-182") {
     songTitle = "BLINK-182 - ONLINE SONGS";
     BandPicture.src = 'assets/images/blink182.jpg';
@@ -164,10 +169,18 @@ function setUp2() {
     songTitle = "BOWLING FOR SOUP - 1985";
     BandPicture.src = 'assets/images/bowlingforsoup.jpg';
     mySound.src = "assets/music/bowlingforsoup.mp3.aac"; 
+} else if (answer === "BOYS LIKE GIRLS") {
+    songTitle = "BOYS LIKE GIRLS - HERO / HEROINE";
+    BandPicture.src = 'assets/images/boyslikegirls.jpg';
+    mySound.src = "assets/music/boyslikegirls.mp3.aac"; 
 } else if (answer === "BRAND NEW") {
     songTitle = "BRAND NEW - SIC TRANSIT GLORIA///GLORY FADES";
     BandPicture.src = 'assets/images/brandnew.jpg';
     mySound.src = "assets/music/brandnew.mp3.aac";  
+  } else if (answer === "CUTE IS WHAT WE AIM FOR") {
+    songTitle = "CUTE IS WHAT WE AIM FOR - THE CURSE OF CURVES";
+    BandPicture.src = 'assets/images/cuteiswhatweaimfor.jpg';
+    mySound.src = "assets/music/cuteiswhatweaimfor.mp3.aac";  
 } else if (answer === "EVANESCENCE") {
     songTitle = "EVANESCENCE - CALL ME WHEN YOU/RE SOBER";
     BandPicture.src = 'assets/images/evanescence.jpg';
@@ -176,6 +189,10 @@ function setUp2() {
     songTitle = "FALL OUT BOY - SUGAR/ WE/RE GOIN DOWN";
     BandPicture.src = 'assets/images/falloutboy.jpg';
     mySound.src = "assets/music/falloutboy.mp3.aac";  
+} else if (answer === "GOOD CHARLOTTE") {
+    songTitle = "GOOD CHARLOTTE - HOLD ON";
+    BandPicture.src = 'assets/images/goodcharlotte.jpg';
+    mySound.src = "assets/music/goodcharlotte.mp3.aac"; 
 } else if (answer === "GORILLAZ") {
     songTitle = "GORILLAZ - FEEL GOOD INC/";
     BandPicture.src = 'assets/images/gorillaz.jpg';
@@ -184,6 +201,14 @@ function setUp2() {
     songTitle = "GREEN DAY - WAKE ME UP WHEN SEPTEMBER ENDS";
     BandPicture.src = 'assets/images/greenday.jpg';
     mySound.src = "assets/music/greenday.mp3.aac"; 
+} else if (answer === "HEAD AUTOMATICA") {
+    songTitle = "HEAD AUTOMATICA - BEATING HEART BABY";
+    BandPicture.src = 'assets/images/headautomatica.jpg';
+    mySound.src = "assets/music/headautomatica.mp3.aac";
+} else if (answer === "HELLOGOODBYE") {
+    songTitle = "HELLOGOODBYE - OH/ IT IS LOVE";
+    BandPicture.src = 'assets/images/hellogoodbye.jpg';
+    mySound.src = "assets/music/hellogoodbye.mp3.aac";
 } else if (answer === "INTERPOL") {
     songTitle = "INTERPOL - SLOW HANDS";
     BandPicture.src = 'assets/images/interpol.jpg';
@@ -192,6 +217,22 @@ function setUp2() {
     songTitle = "JIMMY EAT WORLD - THE MIDDLE";
     BandPicture.src = 'assets/images/jimmyeatworld.jpg';
     mySound.src = "assets/music/jimmyeatworld.mp3.aac";
+} else if (answer === "LESS THAN JAKE") {
+    songTitle = "LESS THAN JAKE - SHE/S GONNA BREAK SOON";
+    BandPicture.src = 'assets/images/lessthanjake.jpg';
+    mySound.src = "assets/music/lessthanjake.mp3.aac";
+} else if (answer === "MAYDAY PARADE") {
+    songTitle = "MAYDAY PARADE - MISERABLE AT BEST";
+    BandPicture.src = 'assets/images/maydayparade.jpg';
+    mySound.src = "assets/music/maydayparade.mp3.aac"; 
+} else if (answer === "MOTION CITY SOUNDTRACK") {
+    songTitle = "MOTION CITY SOUNDTRACK - EVERYTHING IS ALRIGHT";
+    BandPicture.src = 'assets/images/motioncitysoundtrack.jpg';
+    mySound.src = "assets/music/motioncitysoundtrack.mp3.aac";  
+} else if (answer === "MUSE") {
+    songTitle = "MUSE - STARLIGHT";
+    BandPicture.src = 'assets/images/muse.jpg';
+    mySound.src = "assets/music/muse.mp3.aac";  
 } else if (answer === "MY CHEMICAL ROMANCE") {
     songTitle = "MY CHEMICAL ROMANCE - TEENAGERS";
     BandPicture.src = 'assets/images/mychemicalromance.jpg';
@@ -203,19 +244,23 @@ function setUp2() {
 } else if (answer === "NO DOUBT") {
     songTitle = "NO DOUBT - RUNNING";
     BandPicture.src = 'assets/images/nodoubt.jpg';
-    mySound.src = "assets/music/nodoubt.mp3.aac";
-} else if (answer === "RADIOHEAD") {
-    songTitle = "RADIOHEAD - CREEP";
-    BandPicture.src = 'assets/images/radiohead.jpg';
-    mySound.src = "assets/music/radiohead.mp3.aac";  
+    mySound.src = "assets/music/nodoubt.mp3.aac"; 
+  } else if (answer === "RANCID") {
+    songTitle = "RANCID - RED HOT MOON";
+    BandPicture.src = 'assets/images/rancid.jpg';
+    mySound.src = "assets/music/rancid.mp3.aac";
 } else if (answer === "RELIENT K") {
     songTitle = "RELIENT K - BE MY ESCAPE";
     BandPicture.src = 'assets/images/relientk.jpg';
     mySound.src = "assets/music/relientk.mp3.aac"; 
 } else if (answer === "SIMPLE PLAN") {
-    songTitle = "SIMPLE PLAN - ADDICTED";
+    songTitle = "SIMPLE PLAN - I/D DO ANYTHING";
     BandPicture.src = 'assets/images/simpleplan.jpg';
     mySound.src = "assets/music/simpleplan.mp3.aac";
+} else if (answer === "STORY OF THE YEAR") {
+    songTitle = "STORY OF THE YEAR - UNTIL THE DAY I DIE";
+    BandPicture.src = 'assets/images/storyoftheyear.jpg';
+    mySound.src = "assets/music/storyoftheyear.mp3.aac";
 } else if (answer === "SUGARCULT") {
     songTitle = "SUGARCULT - MEMORY";
     BandPicture.src = 'assets/images/sugarcult.jpg';
@@ -228,6 +273,10 @@ function setUp2() {
     songTitle = "THE ALL-AMERICAN REJECTS - SWING/ SWING";
     BandPicture.src = 'assets/images/theallamericanrejects.jpg';
     mySound.src = "assets/music/theallamericanrejects.mp3.aac"; 
+} else if (answer === "THE ATARIS") {
+    songTitle = "THE ATARIS - THE BOYS OF SUMMER";
+    BandPicture.src = 'assets/images/theataris.jpg';
+    mySound.src = "assets/music/theataris.mp3.aac"; 
 } else if (answer === "THE KILLERS") {
     songTitle = "THE KILLERS - BELIEVE ME NATALIE";
     BandPicture.src = 'assets/images/thekillers.jpg';
@@ -240,14 +289,38 @@ function setUp2() {
     songTitle = "THE RED JUMPSUIT APPARATUS - FACE DOWN";
     BandPicture.src = 'assets/images/theredjumpsuitapparatus.jpg';
     mySound.src = "assets/music/theredjumpsuitapparatus.mp3.aac"; 
+} else if (answer === "THE STARTING LINE") {
+    songTitle = "THE STARTING LINE - THE BEST OF ME";
+    BandPicture.src = 'assets/images/thestartingline.jpg';
+    mySound.src = "assets/music/thestartingline.mp3.aac"; 
 } else if (answer === "THE STROKES") {
     songTitle = "THE STROKES - YOU ONLY LIVE ONCE";
     BandPicture.src = 'assets/images/thestrokes.jpg';
     mySound.src = "assets/music/thestrokes.mp3.aac";  
+} else if (answer === "THE USED") {
+    songTitle = "THE USED - THE TASTE OF INK";
+    BandPicture.src = 'assets/images/theused.jpg';
+    mySound.src = "assets/music/theused.mp3.aac";
+} else if (answer === "THE WHITE STRIPES") {
+    songTitle = "THE WHITE STRIPES - SEVEN NATION ARMY";
+    BandPicture.src = 'assets/images/thewhitestripes.jpg';
+    mySound.src = "assets/music/thewhitestripes.mp3.aac";
+} else if (answer === "VAMPIRE WEEKEND") {
+    songTitle = "VAMPIRE WEEKEND - A-PUNK";
+    BandPicture.src = 'assets/images/vampireweekend.jpg';
+    mySound.src = "assets/music/vampireweekend.mp3.aac";
 } else if (answer === "WEEZER") {
-    songTitle = "WEEZER - ISLAND IN THE SUN";
+    songTitle = "WEEZER - PERFECT SITUATION";
     BandPicture.src = 'assets/images/weezer.jpg';
     mySound.src = "assets/music/weezer.mp3.aac";
+} else if (answer === "WHEATUS") {
+    songTitle = "WHEATUS - TEENAGE DIRTBAG";
+    BandPicture.src = 'assets/images/wheatus.jpg';
+    mySound.src = "assets/music/wheatus.mp3.aac";
+} else if (answer === "YELLOWCARD") {
+    songTitle = "YELLOWCARD - OCEAN AVENUE";
+    BandPicture.src = 'assets/images/yellowcard.jpg';
+    mySound.src = "assets/music/yellowcard.mp3.aac";
   }
 }
 

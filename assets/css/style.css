@@ -64,6 +64,7 @@ p{
 
 #answerArray, #guessedLetters {
     letter-spacing: .25em;
+    line-height: 1.5;
 }
 
 #guessedLetters {
