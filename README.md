@@ -1,5 +1,4 @@
 # Psychic-Game
-Homework 3 
 
 Play the game here: https://jaekaetea.github.io/Word-Guess-Game/
 
@@ -17,7 +16,12 @@ However, when they run out of letters, they are shown Keyboard Cat playing to th
 
 ![loserGiffy](/assets/images/loserGiffy.gif)
 
-Enjoy!
+
+### Techologies Used
+HTML, CSS, Bootstrap, and JavaScript. 
+
+
+### Enjoy!
 
 ---
 
