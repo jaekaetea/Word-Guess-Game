@@ -5,7 +5,7 @@ Play the game here: https://jaekaetea.github.io/Word-Guess-Game/
 
 In this app, user are to guess their favourite 2000's Punk band by entering letters in a Wheel of Fortune like fashion, without the cash and paying for a vowel.
 
-When the user correctly guesses the correct awesome punk band, they are rewarded with a song made in 2000 are able to see the awesome band!
+When the user correctly guesses the correct awesome punk band, they are rewarded with a song made in the 2000's and are able to see the awesome band!
 
 ![correct](/assets/images/correctGuess.gif)
 
