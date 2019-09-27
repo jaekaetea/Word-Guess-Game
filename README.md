@@ -3,6 +3,24 @@ Homework 3
 
 Play the game here: https://jaekaetea.github.io/Word-Guess-Game/
 
+In this app, user are to guess their favourite 2000's Punk band by entering letters in a Wheel of Fortune like fashion, without the cash and paying for a vowel.
+
+When the user correctly guesses the correct awesome punk band, they are rewarded with a song made in 2000 are able to see the awesome band!
+
+![correct](/assets/images/correctGuess.gif)
+
+When the user guesses too many wrong letters, they go through a countdown and are given a hint that shows the awesome band.
+
+However, when they run out of letters, they are shown Keyboard Cat playing to their loss.
+
+![incorrect](/assets/images/wrongGuess.gif)
+
+Enjoy!
+
+---
+
+## Class Instructions
+
 Option Two: Word Guess Game (Challenge - Recommended)
 1.	Watch the demo:
 https://www.youtube.com/watch?v=W-IJcC4tYFI&feature=youtu.be
