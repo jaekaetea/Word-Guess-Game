@@ -11,9 +11,11 @@ When the user correctly guesses the correct awesome punk band, they are rewarded
 
 When the user guesses too many wrong letters, they go through a countdown and are given a hint that shows the awesome band.
 
+![incorrect](/assets/images/wrongGuess.gif)
+
 However, when they run out of letters, they are shown Keyboard Cat playing to their loss.
 
-![incorrect](/assets/images/wrongGuess.gif)
+![loserGiffy](/assets/images/loserGiffy.gif)
 
 Enjoy!
 
